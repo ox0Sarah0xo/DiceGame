@@ -3,9 +3,9 @@
  */
 
 import org.junit.*;
-import org.mockito.*;
 
-import java.util.ArrayList;
+import java.io.IOException;
+import java.lang.reflect.Field;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -17,30 +17,49 @@ public class TestingBugs {
     Game game;
     int playerBalance;
     int playerBet;
-    Dice mock = org.mockito.Mockito.mock(Dice.class);
+    DiceValue playerPick;
 
     @Before
     public void setUp() throws Exception{
         playerBet = 5;
         playerBalance = 100;
-        game = new Game(mock, mock, mock);
+        playerPick = DiceValue.HEART;
         player = new Player("Sarah", playerBalance);
     }
 
     @Test
-    public void testIncorrectPayoutBug() {
-        //Arrange
-        DiceValue playerPick = DiceValue.ANCHOR;
-        when(mock.getValue()).thenReturn(DiceValue.ANCHOR);
-        when(mock.getValue()).thenReturn(DiceValue.CLUB);
-        when(mock.getValue()).thenReturn(DiceValue.CLUB);
+    public void testIncorrectPayout() throws IOException {
+        Field[] attrs = Dice.class.getDeclaredFields();
+        for (Field attr: attrs) {
+            if (attr.getName().equals("value")) {
+                attr.setAccessible(true);
+                Dice d1 = new Dice();
+                try {
+                    attr.set(d1, DiceValue.CROWN);
+                } catch (IllegalArgumentException | IllegalAccessException e2) {
+                    e2.printStackTrace();
+                }
+                Dice d2 = new Dice();
+                try {
+                    attr.set(d2, DiceValue.ANCHOR);
+                } catch (IllegalArgumentException | IllegalAccessException e1) {
+                    e1.printStackTrace();
+                }
+                Dice d3 = new Dice();
+                try {
+                    attr.set(d3, DiceValue.HEART);
+                } catch (IllegalArgumentException | IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+                game = new Game(d1, d2, d3);
+                break;
+            }
+        }
 
-        int expectedPlayerBalance = playerBalance + playerBet;
 
-        //Execution
-        game.playRound(player, playerPick, playerBet);
+        int winnings = game.playRound(player, playerPick, playerBet);
+        System.out.println("after match 1, " + player.getName() + " has " + player.getBalance());
+        assertEquals(105, player.getBalance());
 
-        //Result
-        assertFalse(player.getBalance() == expectedPlayerBalance);
     }
 }
