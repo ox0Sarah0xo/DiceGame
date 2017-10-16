@@ -62,4 +62,20 @@ public class TestingBugs {
         assertEquals(105, player.getBalance());
 
     }
+
+    @Test
+    public void testGameEndAt5() {
+        Player player = new Player("Sarah", 100);
+        player.setLimit(0);
+        int turn = 0;
+        int bet = 5;
+        while (player.balanceExceedsLimitBy(bet))
+        {
+            player.takeBet(bet);
+            turn++;
+        }
+        System.out.println(player.getName() + "'s remaining balance is " + player.getBalance());
+        System.out.println("turn is " + turn);
+        assertEquals(0, player.getBalance());
+    }
 }
