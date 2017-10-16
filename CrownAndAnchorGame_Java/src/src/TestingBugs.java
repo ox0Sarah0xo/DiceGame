@@ -78,4 +78,35 @@ public class TestingBugs {
         System.out.println("turn is " + turn);
         assertEquals(0, player.getBalance());
     }
+
+    @Test
+    public void incorrectWinRatio() {
+        //Arrange
+        double expectedRatio = 0.42;
+        double expectedRatioMin = expectedRatio - (0.1 * expectedRatio);
+        double expectedRatioMax = expectedRatio + (0.1 * expectedRatio);
+        double winCount = 0;
+        double totalGames = 0;
+
+        Dice die1 = new Dice();
+        Dice die2 = new Dice();
+        Dice die3 = new Dice();
+        game = new Game(die1, die2, die3);
+
+        playerBalance = 1000;
+
+        //Execute
+        while (player.balanceExceedsLimitBy(playerBet) && player.getBalance() < 2 * playerBalance) {
+            int winnings = game.playRound(player, playerPick, playerBet);
+            winCount += (winnings > 0) ? 1 : 0;
+            totalGames++;
+        }
+        double ratio = winCount / totalGames;
+        double ratioTwoDP = (double) Math.round(ratio * 100) / 100;
+
+        System.out.println("Win Ratio is: " + expectedRatio);
+        //Assert
+        assertTrue(ratioTwoDP >= expectedRatioMin);
+        assertTrue(ratioTwoDP <= expectedRatioMax);
+    }
 }

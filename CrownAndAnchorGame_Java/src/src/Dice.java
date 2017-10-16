@@ -5,7 +5,7 @@ public class Dice {
 	public Dice() {
 		value =  DiceValue.getRandom();
 	}
-	
+
 	public DiceValue getValue() {
 		return value;
 	}
