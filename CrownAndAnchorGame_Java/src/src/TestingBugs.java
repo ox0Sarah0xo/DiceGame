@@ -3,31 +3,44 @@
  */
 
 import org.junit.*;
+import org.mockito.*;
 
-import static org.mockito.Mockito.mock;
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
+
 
 public class TestingBugs {
     Player player;
     Game game;
-    Player player1 = new Player("Sarah", 100);
-    int winnings;
+    int playerBalance;
+    int playerBet;
+    Dice mock = org.mockito.Mockito.mock(Dice.class);
 
     @Before
     public void setUp() throws Exception{
-        player = mock(Player.class);
-        game = mock(Game.class);
+        playerBet = 5;
+        playerBalance = 100;
+        game = new Game(mock, mock, mock);
+        player = new Player("Sarah", playerBalance);
     }
 
     @Test
-    public void testWinningAmountBug() {
-        while (player.balanceExceedsLimitBy(5) && player.getBalance() < 200) {
+    public void testIncorrectPayoutBug() {
+        //Arrange
+        DiceValue playerPick = DiceValue.ANCHOR;
+        when(mock.getValue()).thenReturn(DiceValue.ANCHOR);
+        when(mock.getValue()).thenReturn(DiceValue.CLUB);
+        when(mock.getValue()).thenReturn(DiceValue.CLUB);
 
-            winnings = game.playRound(player1, DiceValue.getRandom(), 5);
-            if (winnings > 0) {
-                Assert.assertEquals(100, player1.getBalance());
-            } else {
-                Assert.assertEquals(95, player1.getBalance());
-            }
-        }
+        int expectedPlayerBalance = playerBalance + playerBet;
+
+        //Execution
+        game.playRound(player, playerPick, playerBet);
+
+        //Result
+        assertFalse(player.getBalance() == expectedPlayerBalance);
     }
 }
