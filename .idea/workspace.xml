@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3d9afe8-b3fa-45d5-83dc-2f11f04937a3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Test cases for bug replication/~$TApplicationEndBug.docx" afterPath="" />
-    </list>
+    <list default="true" id="d3d9afe8-b3fa-45d5-83dc-2f11f04937a3" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +15,7 @@
       <file leaf-file-name="TestingBugs.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CrownAndAnchorGame_Java/src/src/TestingBugs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
+            <state relative-caret-position="439">
               <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -796,7 +794,7 @@
       <workItem from="1506470424658" duration="1175000" />
       <workItem from="1506471713810" duration="4926000" />
       <workItem from="1507071842852" duration="5223000" />
-      <workItem from="1508143427997" duration="20730000" />
+      <workItem from="1508143427997" duration="20760000" />
     </task>
     <servers />
   </component>
@@ -833,7 +831,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32054000" />
+    <option name="totallyTimeSpent" value="32084000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -846,7 +844,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -858,7 +855,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4067227" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4067227" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1176,7 +1173,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CrownAndAnchorGame_Java/src/src/TestingBugs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
+        <state relative-caret-position="439">
           <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
