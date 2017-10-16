@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3d9afe8-b3fa-45d5-83dc-2f11f04937a3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Debug Logs/~$bugLog-Bug3-IncorrectWinRatioFixed.docx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Asg4_Resource_Bundle/Dice.class" afterPath="$PROJECT_DIR$/out/production/Asg4_Resource_Bundle/Dice.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Asg4_Resource_Bundle/Main.class" afterPath="$PROJECT_DIR$/out/production/Asg4_Resource_Bundle/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Asg4_Resource_Bundle/TestingBugs.class" afterPath="$PROJECT_DIR$/out/production/Asg4_Resource_Bundle/TestingBugs.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CrownAndAnchorGame_Java/src/src/Dice.java" afterPath="$PROJECT_DIR$/CrownAndAnchorGame_Java/src/src/Dice.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CrownAndAnchorGame_Java/src/src/Main.java" afterPath="$PROJECT_DIR$/CrownAndAnchorGame_Java/src/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CrownAndAnchorGame_Java/src/src/TestingBugs.java" afterPath="$PROJECT_DIR$/CrownAndAnchorGame_Java/src/src/TestingBugs.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Test cases for bug replication/~$TApplicationEndBug.docx" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -802,7 +796,7 @@
       <workItem from="1506470424658" duration="1175000" />
       <workItem from="1506471713810" duration="4926000" />
       <workItem from="1507071842852" duration="5223000" />
-      <workItem from="1508143427997" duration="20569000" />
+      <workItem from="1508143427997" duration="20730000" />
     </task>
     <servers />
   </component>
@@ -839,7 +833,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31893000" />
+    <option name="totallyTimeSpent" value="32054000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
