@@ -2,6 +2,7 @@
  * Created by Sarah Fromming on 4/10/2017.
  */
 
+import javafx.application.Application;
 import org.junit.*;
 
 import java.io.IOException;
@@ -80,7 +81,7 @@ public class TestingBugs {
     }
 
     @Test
-    public void incorrectWinRatio() {
+    public void testWinRatio() {
         //Arrange
         double expectedRatio = 0.42;
         double expectedRatioMin = expectedRatio - (0.1 * expectedRatio);

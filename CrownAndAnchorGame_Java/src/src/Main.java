@@ -12,6 +12,14 @@ public class Main {
         Dice d3 = new Dice();
 
         Player player = new Player("Fred", 100);
+
+        System.out.println("Please enter your name: ");
+        String name = console.readLine();
+        System.out.println("Please enter your initial balance: ");
+        Integer balance = Integer.valueOf(console.readLine());
+        System.out.println("Please enter your bet: ");
+        Integer bet = Integer.valueOf(console.readLine());
+
         Game game = new Game(d1, d2, d3);
         List<DiceValue> cdv = game.getDiceValues();
 
@@ -25,12 +33,12 @@ public class Main {
             
             for (int i = 0; i < 100; i++)
             {
-            	String name = "Fred";
-            	int balance = 100;
+            	//String name = "Fred";
+            	//int balance = 100;
             	int limit = 0;
                 player = new Player(name, balance);
                 player.setLimit(limit);
-                int bet = 5;
+                //int bet = 5;
 
                 System.out.println(String.format("Start Game %d: ", i));
                 System.out.println(String.format("%s starts with balance %d, limit %d", 
@@ -73,6 +81,7 @@ public class Main {
             totalWins += winCount;
             totalLosses += loseCount;
 
+            System.out.println("Please press 'q' to show overall win rate and close the app");
             String ans = console.readLine();
             if (ans.equals("q")) break;
         } //while true
